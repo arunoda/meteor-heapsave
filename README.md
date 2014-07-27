@@ -23,12 +23,11 @@ Meteor.setInterval(function() {
 
 ## Notice
 * In order to get a heapdump you need to have at least twice of Memory on the system.
-So it's better to turn on swap if you are running under low memory server.
-* Every heapdump will cause v8 to call `gc()`. gc() is a blocking operation.
+So it's better to turn on swap if you are running under a low memory server.
+* Every heapdump will cause v8 to call `gc()`. It is a blocking operation.
 * Heapdump will be saved to disk using a child_process.
-* Heapdump will be compressed before sending to s3. Compression also done via a child process
+* Heapdump will be compressed before sending it to s3. Compression also done via a child process.
 * refer [node-heapdump](https://github.com/bnoordhuis/node-heapdump) project for more information
-
 
 ## Analyzing
 
