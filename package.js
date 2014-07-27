@@ -1,5 +1,5 @@
 Package.describe({
-  "summary": "Take Heapdumps and save them into S3"
+  "summary": "Take heapdumps and save them into S3"
 });
 
 Npm.depends({

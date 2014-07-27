@@ -1,8 +1,8 @@
 {
   "name": "heapsave",
-  "description": "Take Heapdumps and save them into S3r",
+  "description": "Take heapdumps and save them into S3",
   "homepage": "https://kadira.io",
   "author": "https://github.com/arunoda/meteor-heapsave",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "git": "https://github.com/arunoda/meteor-heapsave.git"
 }
