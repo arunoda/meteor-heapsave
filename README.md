@@ -5,21 +5,26 @@ Take Heapdump and save them into S3
 
 ## Install
 
-~~~
-mrt add heapsave
-~~~
+```
+meteor add arunoda:heapsave
+```
 
 ## Usage
 
-~~~js
-var save = HeapSave.toS3('access-key', 'access-secret', 'bucket');
+```js
+var heapsave = HeapSave.toS3('access-key', 'access-secret', 'bucket');
 
-// save heapdumps per every hour
-Meteor.setInterval(function() {
-  var dumpName = 'myapp-' + Date.now();
-  save(dumpName);
-}, 1000 * 60 * 60);
-~~~
+function saveHeap(){
+	var saveName = 'myapp-' + Date.now();
+  	heapsave(saveName);
+}
+
+// Save heapdump after 1 minute
+Meteor.setTimeout(saveHeap, 1000*60);
+
+// Save heapdumps every hour
+Meteor.setInterval(saveHeap, 1000*60*60);
+```
 
 ## Notice
 * In order to get a heapdump you need to have at least twice of Memory on the system.
@@ -40,3 +45,8 @@ Heapdumps can be analyzed using Chrome dev tools.
 ![Loading Heapdump into Chrome Dev Tools](https://i.cloudup.com/-IruTOUNLq.gif)
 
 * [learn](https://developer.chrome.com/devtools/docs/heap-profiling) how to analyze heap and detect memory leaks
+
+## Contributors
+Written by [Arunoda](https://github.com/arunoda) from [Kadira](https://kadira.io/).
+Meteor 1.2 support added by the [Nitrolabs team](http://www.nitrolabs.com/).
+

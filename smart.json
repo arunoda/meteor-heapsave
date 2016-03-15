@@ -1,8 +1,0 @@
-{
-  "name": "heapsave",
-  "description": "Take heapdumps and save them into S3",
-  "homepage": "https://github.com/arunoda/meteor-heapsave",
-  "author": "Arunoda Susiripala <arunoda@meteorhacks.com>",
-  "version": "0.1.2",
-  "git": "https://github.com/arunoda/meteor-heapsave.git"
-}
